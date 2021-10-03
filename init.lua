@@ -10,6 +10,7 @@ end)
 
 minetest.register_chatcommand("death_pos", {
     description = "Go to your last death position",
+    privs = {interact = true},
     func = function(name)
         local player = minetest.get_player_by_name(name)
         local pos = death_pos[player:get_player_name()]
